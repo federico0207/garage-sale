@@ -55,11 +55,11 @@ function renderProducts() {
 
     let badgeClass = "disponibile";
 
-    if (product.Stato === "Prenotato") {
+    if (product.Stato === "Reservado") {
       badgeClass = "prenotato";
     }
 
-    if (product.Stato === "Venduto") {
+    if (product.Stato === "Vendido") {
       badgeClass = "venduto";
     }
 
