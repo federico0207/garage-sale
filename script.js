@@ -58,11 +58,11 @@ function renderProducts() {
     
 card.style.cursor = "pointer";
 
-card.addEventListener("click", () => {
+card.onclick = function() {
   currentImages = product.Foto.split(",");
   currentIndex = 0;
   openModal();
-});
+};
 
     let badgeClass = "disponibile";
 
@@ -101,6 +101,9 @@ const modal = document.getElementById("imageModal");
 const modalImg = document.getElementById("modalImage");
 
 function openModal() {
+  console.log("OPEN MODAL");
+  console.log(currentImages);
+
   modal.style.display = "block";
   modalImg.src = currentImages[currentIndex];
 }
