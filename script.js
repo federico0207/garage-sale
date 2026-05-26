@@ -67,7 +67,7 @@ function renderProducts() {
     }
 
     card.innerHTML = `
-      <img src="${product.Foto}" alt="">
+      <img src="${product.Foto.split(',')[0]}" alt="">
       <div class="content">
         <h2>${product.Nome}</h2>
         <p>${product.Descrizione}</p>
