@@ -1,5 +1,5 @@
 
-const SHEET_JSON_URL = "PASTE_YOUR_SHEETBEST_URL_HERE";
+const SHEET_JSON_URL = "https://api.sheetbest.com/sheets/17f1e164-f628-467d-a2f8-811c80e3dbb0";
 
 let products = [];
 
