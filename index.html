@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercatino Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Mercatino Online</h1>
+  <p>Oggetti disponibili, prenotati e venduti</p>
+</header>
+
+<section class="controls">
+  <input type="text" id="searchInput" placeholder="Cerca oggetti...">
+
+  <select id="categoryFilter">
+    <option value="all">Tutte le categorie</option>
+  </select>
+
+  <select id="statusFilter">
+    <option value="all">Tutti gli stati</option>
+    <option value="Disponibile">Disponibile</option>
+    <option value="Prenotato">Prenotato</option>
+    <option value="Venduto">Venduto</option>
+  </select>
+</section>
+
+<section id="products"></section>
+
+<a id="whatsappButton" href="https://wa.me/5210000000000" target="_blank">
+  Contattami su WhatsApp
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
