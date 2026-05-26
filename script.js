@@ -55,6 +55,14 @@ function renderProducts() {
 
     const card = document.createElement("div");
     card.className = "card";
+    
+card.style.cursor = "pointer";
+
+card.addEventListener("click", () => {
+  currentImages = product.Foto.split(",");
+  currentIndex = 0;
+  openModal();
+});
 
     let badgeClass = "disponibile";
 
@@ -88,3 +96,38 @@ document.getElementById("categoryFilter").addEventListener("change", renderProdu
 document.getElementById("statusFilter").addEventListener("change", renderProducts);
 
 loadProducts();
+
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+
+function openModal() {
+  modal.style.display = "block";
+  modalImg.src = currentImages[currentIndex];
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+document.querySelector(".close").onclick = closeModal;
+
+document.getElementById("nextBtn").onclick = () => {
+  currentIndex =
+    (currentIndex + 1) % currentImages.length;
+
+  modalImg.src = currentImages[currentIndex];
+};
+
+document.getElementById("prevBtn").onclick = () => {
+  currentIndex =
+    (currentIndex - 1 + currentImages.length)
+    % currentImages.length;
+
+  modalImg.src = currentImages[currentIndex];
+};
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    closeModal();
+  }
+};
