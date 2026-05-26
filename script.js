@@ -3,6 +3,9 @@ const SHEET_JSON_URL = "https://api.sheetbest.com/sheets/17f1e164-f628-467d-a2f8
 
 let products = [];
 
+let currentImages = [];
+let currentIndex = 0;
+
 async function loadProducts() {
   const response = await fetch(SHEET_JSON_URL);
   products = await response.json();
