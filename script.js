@@ -6,6 +6,8 @@ let products = [];
 let currentImages = [];
 let currentIndex = 0;
 
+let currentProduct = null;
+
 async function loadProducts() {
   const response = await fetch(SHEET_JSON_URL);
   products = await response.json();
@@ -59,6 +61,7 @@ function renderProducts() {
 card.style.cursor = "pointer";
 
 card.onclick = function() {
+  currentProduct = product;
   currentImages = product.Foto.split(",");
   currentIndex = 0;
   openModal();
