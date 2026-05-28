@@ -104,11 +104,19 @@ const modal = document.getElementById("imageModal");
 const modalImg = document.getElementById("modalImage");
 
 function openModal() {
-  console.log("OPEN MODAL");
-  console.log(currentImages);
 
   modal.style.display = "block";
+
   modalImg.src = currentImages[currentIndex];
+
+  document.getElementById("modalTitle").textContent =
+    currentProduct.Nome;
+
+  document.getElementById("modalPrice").textContent =
+    currentProduct.Prezzo;
+
+  document.getElementById("modalDescription").textContent =
+    currentProduct.Descrizione;
 }
 
 function closeModal() {
