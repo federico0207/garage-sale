@@ -5,7 +5,6 @@ let products = [];
 
 let currentImages = [];
 let currentIndex = 0;
-
 let currentProduct = null;
 
 async function loadProducts() {
