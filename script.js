@@ -117,11 +117,13 @@ function openModal() {
   document.getElementById("modalDescription").textContent =
     currentProduct.Descrizione;
 
-  const message =
-    `Hola, me interesa ${currentProduct.Nome}`;
+ const message =
+`Hola, me interesa ${currentProduct.Nome}.
+Precio publicado: ${currentProduct.Prezzo}
+¿Sigue disponible?`;
 
-  document.getElementById("productWhatsapp").href =
-    `https://wa.me/529981308940?text=${encodeURIComponent(message)}`;
+document.getElementById("productWhatsapp").href =
+`https://wa.me/529981308940?text=${encodeURIComponent(message)}`;
 }
 
 function closeModal() {
