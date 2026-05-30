@@ -116,6 +116,12 @@ function openModal() {
 
   document.getElementById("modalDescription").textContent =
     currentProduct.Descrizione;
+
+  const message =
+    `Hola, me interesa ${currentProduct.Nome}`;
+
+  document.getElementById("productWhatsapp").href =
+    `https://wa.me/529981308940?text=${encodeURIComponent(message)}`;
 }
 
 function closeModal() {
