@@ -135,19 +135,23 @@ header {
 
 .modal-controls {
   position: fixed;
-  bottom: 40px;
+  top: 50%;
+  left: 0;
   width: 100%;
-  text-align: center;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .modal-controls button {
-  padding: 14px 22px;
-  font-size: 24px;
-  margin: 0 15px;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
   border: none;
-  border-radius: 12px;
+  border-radius: 50%;
   cursor: pointer;
-  background: white;
+  background: rgba(255,255,255,0.9);
+  pointer-events: auto;
 }
 
 .modal-info {
@@ -173,4 +177,18 @@ header {
   font-size: 18px;
   max-width: 700px;
   margin: auto;
+}
+
+#prevBtn {
+  left: 5%;
+}
+
+#nextBtn {
+  right: 5%;
+}
+
+@media (max-width: 768px) {
+  .modal-controls {
+    display: none;
+  }
 }
