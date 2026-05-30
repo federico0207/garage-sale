@@ -207,3 +207,19 @@ header {
 .product-whatsapp:hover {
   opacity: 0.9;
 }
+
+.product-whatsapp {
+  display: block;
+  width: fit-content;
+  margin: 15px auto;
+  padding: 12px 24px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.reserve-button {
+  background: #2563eb;
+}
