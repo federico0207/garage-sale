@@ -129,7 +129,7 @@ function openModal() {
 
   document.getElementById("productWhatsapp").href =
     `https://wa.me/529981308940?text=${encodeURIComponent(message)}`;
-}
+
 
 function closeModal() {
   modal.style.display = "none";
