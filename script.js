@@ -134,6 +134,30 @@ document.getElementById("reserveWhatsapp").href =
 `https://wa.me/529981308940?text=${encodeURIComponent(reserveMessage)}`;
 }
 
+const soldMessage =
+  document.getElementById("soldMessage");
+
+const infoButton =
+  document.getElementById("infoWhatsapp");
+
+const reserveButton =
+  document.getElementById("reserveWhatsapp");
+
+if (currentProduct.Stato === "Vendido") {
+
+  soldMessage.style.display = "block";
+
+  infoButton.style.display = "none";
+  reserveButton.style.display = "none";
+
+} else {
+
+  soldMessage.style.display = "none";
+
+  infoButton.style.display = "block";
+  reserveButton.style.display = "block";
+}
+
 function closeModal() {
   modal.style.display = "none";
 }
