@@ -192,3 +192,18 @@ header {
     display: none;
   }
 }
+
+.product-whatsapp {
+  display: inline-block;
+  margin-top: 20px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.product-whatsapp:hover {
+  opacity: 0.9;
+}
