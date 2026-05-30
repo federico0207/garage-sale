@@ -150,6 +150,13 @@ if (currentProduct.Stato === "Vendido") {
   infoButton.style.display = "none";
   reserveButton.style.display = "none";
 
+} else if (currentProduct.Stato === "Reservado") {
+
+  soldMessage.style.display = "none";
+
+  infoButton.style.display = "block";
+  reserveButton.style.display = "none";
+
 } else {
 
   soldMessage.style.display = "none";
