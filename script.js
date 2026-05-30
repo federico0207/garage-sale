@@ -144,3 +144,42 @@ window.onclick = function(event) {
     closeModal();
   }
 };
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+modalImg.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+modalImg.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+
+  const swipeDistance = touchEndX - touchStartX;
+
+  // Ignore very short swipes
+  if (Math.abs(swipeDistance) < 50) {
+    return;
+  }
+
+  // Swipe left = next image
+  if (swipeDistance < 0) {
+    currentIndex =
+      (currentIndex + 1) % currentImages.length;
+
+    modalImg.src = currentImages[currentIndex];
+  }
+
+  // Swipe right = previous image
+  if (swipeDistance > 0) {
+    currentIndex =
+      (currentIndex - 1 + currentImages.length)
+      % currentImages.length;
+
+    modalImg.src = currentImages[currentIndex];
+  }
+}
