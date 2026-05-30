@@ -117,13 +117,21 @@ function openModal() {
   document.getElementById("modalDescription").textContent =
     currentProduct.Descrizione;
 
- const message =
-`Hola, me interesa ${currentProduct.Nome}.
+ const infoMessage =
+`Hola, me interesa ${currentProduct.Nome}
 Precio publicado: ${currentProduct.Prezzo}
 ¿Sigue disponible?`;
 
-document.getElementById("productWhatsapp").href =
-`https://wa.me/529981308940?text=${encodeURIComponent(message)}`;
+document.getElementById("infoWhatsapp").href =
+`https://wa.me/529981308940?text=${encodeURIComponent(infoMessage)}`;
+
+const reserveMessage =
+`Hola, quisiera reservar este artículo: ${currentProduct.Nome}
+Precio publicado: ${currentProduct.Prezzo}
+¿Todavia se puede reservar?`;
+
+document.getElementById("reserveWhatsapp").href =
+`https://wa.me/529981308940?text=${encodeURIComponent(reserveMessage)}`;
 }
 
 function closeModal() {
